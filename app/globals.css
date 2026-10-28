@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0B0F14;
+  --color-accent: #ff8a00;
+  --color-heading: #f8f9fa;
+  --color-subtext: #a0aec0;
+}
+
+@theme inline {
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 85rem;
+  padding-inline: 1.5rem;
+
+  @media (min-width: 40rem) {
+    padding-inline: 2.5rem;
+  }
+
+  @media (min-width: 100rem) {
+    padding-inline: 3rem;
+  }
+}
+
+.persona-stars {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(248, 249, 250, 0.58) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 72% 32%, rgba(248, 249, 250, 0.38) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 39% 79%, rgba(248, 249, 250, 0.34) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 86% 74%, rgba(255, 138, 0, 0.42) 0 1px, transparent 1.5px);
+  background-size: 17rem 15rem, 23rem 21rem, 29rem 25rem, 37rem 33rem;
+  opacity: 0.45;
+}
+
+.project-gallery .swiper-button-next,
+.project-gallery .swiper-button-prev {
+  width: 2rem;
+  height: 2rem;
+  margin-top: -1rem;
+  border: 1px solid rgba(248, 249, 250, 0.2);
+  border-radius: 999px;
+  background: rgba(11, 15, 20, 0.7);
+  color: #ff8a00;
+  backdrop-filter: blur(8px);
+}
+
+.project-gallery .swiper-button-next::after,
+.project-gallery .swiper-button-prev::after {
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.project-gallery .swiper-pagination-bullet {
+  width: 0.38rem;
+  height: 0.38rem;
+  background: rgba(248, 249, 250, 0.7);
+  opacity: 0.72;
+}
+
+.project-gallery .swiper-pagination-bullet-active {
+  width: 1rem;
+  border-radius: 999px;
+  background: #ff8a00;
+  opacity: 1;
+}
